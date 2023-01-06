@@ -56,8 +56,10 @@ app.post('/send', (req, res) => {
     
     <p>===========================================</p>
     <br/>
-    <img src="cid:uniq-contactUs.png" alt="contactUs" />
+    
   `;
+
+  {/* <img src="cid:uniq-contactUs.png" alt="contactUs" /> */ }
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -88,13 +90,13 @@ app.post('/send', (req, res) => {
     ===========================================
     `,
     html: output,
-    attachments: [
-      {
-        filename: 'contactUs.png',
-        path: 'https://contacto-backend.vercel.app/images/contactUs.png',
-        cid: 'uniq-contactUs.png'
-      }
-    ]
+    // attachments: [
+    //   {
+    //     filename: 'contactUs.png',
+    //     path: 'https://contacto-backend.vercel.app/images/contactUs.png',
+    //     cid: 'uniq-contactUs.png'
+    //   }
+    // ]
   };
 
   // send mail with defined transport object
