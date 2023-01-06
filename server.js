@@ -91,7 +91,7 @@ app.post('/send', (req, res) => {
     attachments: [
       {
         filename: 'contactUs.png',
-        path: __dirname + '/public/images/contactUs.png',
+        path: 'https://contacto-backend.vercel.app/images/contactUs.png',
         cid: 'uniq-contactUs.png'
       }
     ]
