@@ -88,13 +88,13 @@ app.post('/send', (req, res) => {
     ===========================================
     `,
     html: output,
-    // attachments: [
-    //   {
-    //     filename: 'contactUs.png',
-    //     path: './public/images/contactUs.png',
-    //     cid: 'uniq-contactUs.png'
-    //   }
-    // ]
+    attachments: [
+      {
+        filename: 'contactUs.png',
+        path: './public/images/contactUs.png',
+        cid: 'uniq-contactUs.png'
+      }
+    ]
   };
 
   // send mail with defined transport object
@@ -103,10 +103,6 @@ app.post('/send', (req, res) => {
       res.json({
         "decision": "error",
       });
-      // res.json({
-      //   "email": process.env.USER_EMAIL,
-      //   "pass": process.env.USER_PASS
-      // });
     }
     else {
       res.json({
