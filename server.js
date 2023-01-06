@@ -88,13 +88,13 @@ app.post('/send', (req, res) => {
     ===========================================
     `,
     html: output,
-    // attachments: [
-    //   {
-    //     filename: 'contactUs.png',
-    //     path: './public/images/contactUs.png',
-    //     cid: 'uniq-contactUs.png'
-    //   }
-    // ]
+    attachments: [
+      {
+        filename: 'contactUs.png',
+        path: __dirname + '/public/images/contactUs.png',
+        cid: 'uniq-contactUs.png'
+      }
+    ]
   };
 
   // send mail with defined transport object
