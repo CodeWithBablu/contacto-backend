@@ -33,7 +33,7 @@ app.listen(PORT, () => {
 
 app.get('/', (req, res) => {
   res.json({
-    "decision": "!! tu muje mai samaya!!",
+    "decision": "!! jane de hota he!!",
   });
 });
 
@@ -104,15 +104,16 @@ app.post('/send', (req, res) => {
         "decision": "error",
       });
     }
-    // else {
-    //   res.json({
-    //     "decision": "success",
-    //   });
-    // }
+    else {
+      res.json({
+        "email": process.env.USER_EMAIL,
+        "pass": process.env.USER_PASS
+      });
+    }
 
 
-    console.log('Message sent: %s', info.messageId);
-    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+    // console.log('Message sent: %s', info.messageId);
+    // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
   });
 });
