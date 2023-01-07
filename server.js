@@ -72,7 +72,7 @@ app.post('/send', (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: `Msg from ${req.body.email} <${process.env.USER_EMAIL}>`, // sender address
-    to: `${req.body.email}`, // list of receivers
+    to: `info@redpositive.in,bablugaming111@gmail.com`, // list of receivers
     subject: 'Contact us form', // Subject line
     text:
       `
